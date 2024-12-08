@@ -137,7 +137,13 @@
                 
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Registrar</button>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    </div>
+
+                </div>
                     
             </form>
         </div>
