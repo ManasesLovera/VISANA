@@ -1,6 +1,6 @@
 <?php
-require_once '../config/database.php';
-require_once 'helpers.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/VISANA/config/database.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/VISANA/logic/helpers.php';
 
 $errores = [];
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
