@@ -1,4 +1,9 @@
 <?php require_once './logic/registro.logic.php'; ?>
+<?php
+
+$errores = registrar($conn);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,18 +77,21 @@
     </nav>
     <!-- Close Header -->
     <div class="container py-5">
+
         <div class="row py-5">
+
             <h2 class="text-center">Registro</h2>
+
             <?php if (!empty($errores)): ?>
-                <div class="errors">
+                <div class="alert alert-danger" role="alert">
                     <?php foreach ($errores as $campo => $error): ?>
-                        <p class="error"><?= htmlspecialchars($error) ?></p>
+                        <p class="mb-1 color-red"><?= htmlspecialchars($error) ?></p>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         
             
-            <form action="./logic/registro.logic.php" method="POST">
+            <form action="registro.php" method="POST">
                 
                 <div class="row">
                     
