@@ -100,7 +100,7 @@
                     </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="clave">Contraseña:</label>
-                        <input class="form-control mt-1" type="text" name="clave" id="clave" value="<?= htmlspecialchars($_POST['clave'] ?? '') ?>">
+                        <input class="form-control mt-1" type="password" name="clave" id="clave" value="<?= htmlspecialchars($_POST['clave'] ?? '') ?>">
                     </div>
                 
                 </div>
