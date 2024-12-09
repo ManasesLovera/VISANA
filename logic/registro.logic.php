@@ -38,7 +38,7 @@ function registrar($conn) {
             } else {
                 $errores['general'] = "Error al registrar. Intenta nuevamente.";
                 echo "<script>alert('Error al registrar');</script>";
-                header("Location: registro.php");
+                header("Location: login.php");
             }
             $stmt->close();
         }
