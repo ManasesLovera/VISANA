@@ -31,13 +31,13 @@ $errores = registrar($conn);
                     <i class="fa fa-envelope mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">administrativo@visana.com.co</a>
                     <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">3202916463</a>
                 </div>
                 <div>
-                    <a class="text-light" href="" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    <!-- <a class="text-light" href="" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>-->
+                    <a class="text-light" href="https://www.instagram.com/_visana/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <!-- <a class="text-light" href="" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>-->
+                    <!-- <a class="text-light" href="" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>-->
                 </div>
             </div>
         </div>
@@ -69,10 +69,34 @@ $errores = registrar($conn);
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="registro.php">Registro</a>
+                            <li class="nav-item">
+                            <a class="nav-link" href="login.php">Login</a>
                         </li>
                     </ul>
                 </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>-->
+                    <a class="nav-icon position-relative text-decoration-none" href="login.php">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="login.php">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                </div>
             </div>
+
         </div>
     </nav>
     <!-- Close Header -->
@@ -156,6 +180,96 @@ $errores = registrar($conn);
             </form>
         </div>
     </div>
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+        <div class="container">
+            <div class="row">
+
+            <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Acerca De Nosotros</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt fa-fw"></i>
+                            Bogotá - Colombia
+                        </li>
+                        <li>
+                            <i class="fa fa-phone fa-fw"></i>
+                            <a class="text-decoration-none" href="tel:010-020-0340">3202916463</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope fa-fw"></i>
+                            <a class="text-decoration-none" href="mailto:info@company.com">administrativo@visana.com.co</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Servicio Al Cliente</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="#">Contratos</a></li>
+                        <li><a class="text-decoration-none" href="#">Politica Tratamiendo de datos</a></li>
+                        <li><a class="text-decoration-none" href="#">Terminos y Condiciones</a></li>
+                        <li><a class="text-decoration-none" href="#">SAGRILAFT</a></li>
+                        <li><a class="text-decoration-none" href="#">¿Quieres vender VISANA?</a></li>
+                        <li><a class="text-decoration-none" href="#">Peticiones, quejas, reclamos y sugerencias</a></li>                        
+                    </ul>
+                </div>
+
+                <div class="col-md-4 pt-5">
+                    <h2 class="h2 text-light border-bottom pb-3 border-light">Más Información</h2>
+                    <ul class="list-unstyled text-light footer-link-list">
+                        <li><a class="text-decoration-none" href="index.html">Inicio</a></li>
+                        <li><a class="text-decoration-none" href="about.html">Nosotros</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Ubicaciones de Tiendas</a></li>
+                        <li><a class="text-decoration-none" href="registro.php">Registro</a></li>
+                        <li><a class="text-decoration-none" href="contact.html">Contacto</a></li>
+                        <li><a class="text-decoration-none" href="login.php">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <!--<li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li> -->
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/_visana/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <!--<li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li> -->
+                        <!--<li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                        </li> -->
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="w-100 bg-black py-3">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12">
+                        <p class="text-left text-light">
+                            Copyright &copy; 2024 
+                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">FAEMSA</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
     
     <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
