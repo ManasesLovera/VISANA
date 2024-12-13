@@ -80,7 +80,7 @@ function registrar($conn) {
     if (empty($nacionalidad)) $errores['nacionalidad'] = 'El campo nacionalidad es obligatorio.';
 
     // Validar usuario único
-    $stmt = $conn->prepare("SELECT id FROM usuarios WHERE usuario = ? OR email = ?");
+    $stmt = $conn->prepare("SELECT Id FROM cliente WHERE Usuario = ? OR Email = ?");
     $stmt->bind_param('ss', $usuario, $email);
     $stmt->execute();
     $stmt->store_result();
@@ -92,7 +92,7 @@ function registrar($conn) {
     // Validar Upline existente
     if (!empty($upline)) { // Verifica si el código upline no está vacío
         // Validar Upline existente
-        $stmt = $conn->prepare("SELECT id FROM usuarios WHERE upline_code = ?");
+        $stmt = $conn->prepare("SELECT Id FROM cliente WHERE Upline = ?");
         $stmt->bind_param('s', $upline);
         $stmt->execute();
         $stmt->store_result();
