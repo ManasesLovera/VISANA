@@ -102,9 +102,9 @@ $errores = registrar($conn);
     <!-- Close Header -->
     <div class="container py-5">
 
-        <div class="row py-5">
+        <div class="row py-2">
 
-            <h2 class="text-center">Registro</h2>
+            <h2 class="text-center pb-4">Registro</h2>
 
             <?php if (!empty($errores)): ?>
                 <div class="alert alert-danger" role="alert">
@@ -134,7 +134,7 @@ $errores = registrar($conn);
                     
                     <div class="form-group col-md-6 mb-3">
                         <label for="usuario">Usuario:</label>
-                        <input class="form-control mt-1" type="password" name="usuario" id="usuario">
+                        <input class="form-control mt-1" type="text" name="usuario" id="usuario">
                         </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="direccion">Dirección:</label>
@@ -151,7 +151,7 @@ $errores = registrar($conn);
                         </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="confirmarClave">Confirmar Contraseña:</label>
-                        <input class="form-control mt-1" type="text" name="confirmarClave" id="confirmarClave" value="<?= htmlspecialchars($_POST['confirmarClave'] ?? '') ?>">
+                        <input class="form-control mt-1" type="password" name="confirmarClave" id="confirmarClave" value="<?= htmlspecialchars($_POST['confirmarClave'] ?? '') ?>">
                     </div>
                 
                 </div>

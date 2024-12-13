@@ -77,7 +77,6 @@ function registrar($conn) {
         if ($clave !== $confirmarClave) $errores['confirmarClave'] = 'Las contraseñas no coinciden.';
         if (empty($email)) $errores['email'] = 'El correo es obligatorio.';
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errores['email'] = 'El correo no es válido.';
-        if (empty($upline)) $errores['upline'] = 'El código Upline es obligatorio.';
         if (empty($nacionalidad)) $errores['nacionalidad'] = 'El campo nacionalidad es obligatorio.';
 
         // Validar usuario único
@@ -114,9 +113,10 @@ function registrar($conn) {
             $stmt->bind_param('sssssssssss', $nombre, $apellido, $usuario, $nombreCompleto, $hashedPassword, $direccion, $telefono, $email, $upline, $nacionalidad, $codigo);
             if ($stmt->execute()) {
                 // Redireccion a login.php con mensaje de éxito
-                echo "<script>
+                echo "
+                <script>
                     alert('Se ha registrado exitosamente.');
-                    window.location.href = '../login.php';
+                    window.location.href = './login.php';
                 </script>";
                 exit;
             } 
