@@ -133,12 +133,25 @@ $errores = registrar($conn);
                 <div class="row">
                     
                     <div class="form-group col-md-6 mb-3">
-                        <label for="clave">Clave:</label>
-                        <input class="form-control mt-1" type="password" name="clave" id="clave">
+                        <label for="usuario">Usuario:</label>
+                        <input class="form-control mt-1" type="password" name="usuario" id="usuario">
                         </div>
                     <div class="form-group col-md-6 mb-3">
                         <label for="direccion">Dirección:</label>
                         <input class="form-control mt-1" type="text" name="direccion" id="direccion" value="<?= htmlspecialchars($_POST['direccion'] ?? '') ?>">
+                    </div>
+                
+                </div>
+
+                <div class="row">
+                    
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="clave">Contraseña:</label>
+                        <input class="form-control mt-1" type="password" name="clave" id="clave">
+                        </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="confirmarClave">Confirmar Contraseña:</label>
+                        <input class="form-control mt-1" type="text" name="confirmarClave" id="confirmarClave" value="<?= htmlspecialchars($_POST['confirmarClave'] ?? '') ?>">
                     </div>
                 
                 </div>

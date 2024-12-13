@@ -33,12 +33,12 @@ function registrar($conn) {
 
             if ($stmt->execute()) {
                 echo "<script>alert('Se registro exitosamente!');</script>";
-                header("Location: registro.php?success=true&upline_nombre=$nombreUpline&codigo=$codigo");
+                header("Location: login.php");
                 exit;
             } else {
                 $errores['general'] = "Error al registrar. Intenta nuevamente.";
                 echo "<script>alert('Error al registrar');</script>";
-                header("Location: login.php");
+                header("Location: registro.php");
             }
             $stmt->close();
         }
