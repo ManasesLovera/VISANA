@@ -115,17 +115,23 @@
             <?php endif; ?>
         
             
-            <form class="container mt-5" action="http://localhost/STORE/index.php" method="POST">
+            <form class="container mt-5" action="http://localhost/STORE/process/login.php" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-md-6 bg-light p-5 rounded">
                         <div class="form-group">
-                            <label for="nombre">Usuario:</label>
-                            <input class="form-control form-control-lg mb-3" type="text" name="nombre" id="nombre" value="<?= htmlspecialchars($_SESSION['nombreAdmin'] ?? '') ?>">
+                            <label for="nombre-login">Usuario:</label>
+                            <input class="form-control form-control-lg mb-3" type="text" name="nombre-login" id="nombre" value="<?= htmlspecialchars($_SESSION['nombre-login'] ?? '') ?>">
                         </div>
                         <div class="form-group">
-                            <label for="clave">Contraseña:</label>
-                            <input class="form-control form-control-lg mb-3" type="password" name="clave" id="clave" value="<?= htmlspecialchars($_SESSION['clave'] ?? '') ?>">
+                            <label for="clave-login">Contraseña:</label>
+                            <input class="form-control form-control-lg mb-3" type="password" name="clave-login" id="clave" value="<?= htmlspecialchars($_SESSION['clave-login'] ?? '') ?>">
                         </div>
+                        <div class="radio" hidden>
+                        <label>
+                            <input type="radio" name="optionsRadios" value="option1" checked>
+                            Usuario
+                        </label>
+                    </div>
                         <button type="submit" class="btn btn-primary btn-block">Acceder</button>
                     </div>
                 </div>
