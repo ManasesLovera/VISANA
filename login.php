@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Registro</title>
+    <title>Login</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
@@ -100,7 +100,7 @@
         </div>
     </nav>
     <!-- Close Header -->
-    <div class="container py-5">
+    <div class="container py-3">
 
         <div class="row py-5">
 
@@ -115,22 +115,27 @@
             <?php endif; ?>
         
             
-            <form class="container mt-5" action="http://localhost/STORE/index.php" method="POST">
-    <div class="row justify-content-center">
-        <div class="col-md-6 bg-light p-5 rounded">
-            <h2 class="text-center mb-4">Formulario de Registro</h2>
-            <div class="form-group">
-                <label for="nombre">Usuario:</label>
-                <input class="form-control form-control-lg" type="text" name="nombre" id="nombre" value="<?= htmlspecialchars($_POST['nombre'] ?? '') ?>">
-            </div>
-            <div class="form-group">
-                <label for="clave">Contraseña:</label>
-                <input class="form-control form-control-lg" type="password" name="clave" id="clave" value="<?= htmlspecialchars($_POST['clave'] ?? '') ?>">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Registrar</button>
-        </div>
-    </div>
-</form>
+            <form class="container mt-5" action="http://localhost/STORE/process/login.php" method="POST">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 bg-light p-5 rounded">
+                        <div class="form-group">
+                            <label for="nombre-login">Usuario:</label>
+                            <input class="form-control form-control-lg mb-3" type="text" name="nombre-login" id="nombre" value="<?= htmlspecialchars($_SESSION['nombre-login'] ?? '') ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="clave-login">Contraseña:</label>
+                            <input class="form-control form-control-lg mb-3" type="password" name="clave-login" id="clave" value="<?= htmlspecialchars($_SESSION['clave-login'] ?? '') ?>">
+                        </div>
+                        <div class="radio" hidden>
+                        <label>
+                            <input type="radio" name="optionsRadios" value="option1" checked>
+                            Usuario
+                        </label>
+                    </div>
+                        <button type="submit" class="btn btn-primary btn-block">Acceder</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     
